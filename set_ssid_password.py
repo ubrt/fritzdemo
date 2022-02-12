@@ -15,10 +15,10 @@ emojis = {
 }
 
 
-def set_password_and_ssid(f_connection, new_ssid, password, wifi_config='WLANConfiguration:3'):
+def set_ssid_and_password(f_connection, new_ssid, new_password, wifi_config='WLANConfiguration:3'):
     print("Setting ssid and password on {}".format(f_connection.address))
     security_keys = f_connection.call_action(wifi_config, 'GetSecurityKeys')
-    security_keys['NewKeyPassphrase'] = password
+    security_keys['NewKeyPassphrase'] = new_password
     f_connection.call_action(wifi_config,
                              'SetSecurityKeys',
                              arguments=security_keys)
@@ -38,4 +38,4 @@ devices = [
 ]
 
 for device in devices:
-    set_password_and_ssid(device, guest_ssid, guest_password)
+    set_ssid_and_password(device, guest_ssid, guest_password)

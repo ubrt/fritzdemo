@@ -11,6 +11,6 @@ After that just create a connection to your FRITZ!box and every other fritz devi
 ```python
 FritzConnection(address='192.168.178.1', user='fritz****', password='<password>', use_tls=False)
 ```
-Please inspect the set_password_and_ssid function in set_ssid_password.py to see how to receive and set the ssid and password of your network. The demo defaults to the guest wifi config "WLANConfiguration:3". You can change this to your needs. 
+Please inspect the set_ssid_and_password function in set_ssid_password.py to see how to receive and set the ssid and password of your network. The demo defaults to the guest wifi config "WLANConfiguration:3". You can change this to your needs. 
 
 The example codes generates the phrase "It's dayOtTheWeek \(^_^)/" in german with a specific emoji for every day of the week. Not really useful, just a little easteregg.
